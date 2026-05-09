@@ -1,84 +1,77 @@
 <!DOCTYPE html>
+<!-- This page is adapted from w3schools "How to make a link tree website https://www.w3schools.com/howto/howto_website_create_linktree.asp" -->
 <html lang="en">
+
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <!-- Add your name below -->
   <title>Morgan Lynch</title>
-  <link rel="stylesheet" href="style.css" />
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Google+Sans:ital,opsz,wght@0,17..18,400..700;1,17..18,400..700&family=Space+Mono:ital,wght@0,400;0,700;1,400;1,700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/style.css">
 </head>
-<body>
 
-  <div class="main">
-
-    <!-- Profile at top -->
-    <div class="profile">
-      <img src="profile.jpeg" alt="Morgan Lynch" class="profile-pic" />
-      <p class="bio">Hey. I'm <strong>Morgan Lynch</strong>, a 4th year Economics student with a passion for monetary policy reform.</p>
+<body class="main-text-color">
+  <!-- Content container. Everything except footer goes here -->
+  <div class="container">
+    <!-- Image and name container. Put your replacement photo—which you should crop to be square—in the images folder, then change the source attribute to images/yourportraitfilename.jpg. This path says, "Look in the images folder for yourportraitfilename.jpg." Be sure to change the alt text, too. -->
+    <div class="image-container">
+      <img src="images/profile.jpeg" alt="Morgan Lynch">
     </div>
+    <div class="intro">
+      I'm <span class="name"><strong>Morgan Lynch</strong></span>, a 4th year Economics student with a passion for monetary policy reform.
+    </div>
+    <div class="section-header">
+      <h1>My work</h1>
+    </div>
+    <!-- Replace the # inside of the href="#" with your links. -->
+    <div class="links-container">
+      <div class="button toggle">Blog post</div>
+      <div class="slidedown">
+        <div class="description">
+          <h2>Do You Really Need That?: A Deep Dive into Gen Z's Spending Habits</h2>
+          <p>As an econ major, I am deeply interested in what drive consumer behavior, especially Gen Z consumers. Read my first blog post to learn more about social media influence and other psychological factors that drive impulse spending within our economy</p>
+          <a href="https://medium.com/@morganlyynch/do-you-really-need-that-a-deep-dive-into-gen-zs-spending-habits-c872b793e0a2" class="external-link" target="_blank">Read</a>
+        </div>
+      </div>
 
-    <h1 class="section-heading">My work</h1>
+      <div class="button toggle">Video</div>
+      <div class="slidedown">
+        <div class="description">
+          <h2>Just A Trim</h2>
+          <p>'Just A Trim' is a short film that explores themes of identity existentialism, and the illusion of control within out lives through a helpful haircut tutorial.</p>
+          <a href="https://www.youtube.com/watch?v=Ddt_z4oA3Zs" class="external-link" target="_blank">Watch</a>
+        </div>
+      </div>
 
-    <!-- Blog -->
-    <div class="card">
-      <button class="card-toggle" onclick="toggle(this)">My Blog!</button>
-      <div class="card-body">
-        <h2>Do You Really Need That?: A Deep Dive into Gen Z's Spending Habits</h2>
-        <p>As an econ major, I am deeply interested in what drives consumer behavior, especially Gen Z consumers. Read my first blog post to learn more about social media influence and other psychological factors that drive impulse spending within our economy.</p>
-        <a href="https://medium.com/@morganlyynch/do-you-really-need-that-a-deep-dive-into-gen-zs-spending-habits-c872b793e0a2" target="_blank">Read on Medium</a>
+      <div class="button toggle">Podcast</div>
+      <div class="slidedown">
+        <div class="description">
+          <h2>AI vs. Human Creativity</h2>
+          <p>Listen to my classmates and I discuss challenges within the creative sphere and answer questions around AI's capacity to takeover the art world.</p>
+          <a href="https://soundcloud.com/ben-lawton-120223689/ai-vs-human-creativity?si=ffbf88447c914abfb8a88aa22348be07&utm_source=clipboard&utm_medium=text&utm_campaign=social_sharing" class="external-link" target="_blank">Listen</a>
+        </div>
       </div>
     </div>
 
-    <!-- Video -->
-    <div class="card">
-      <button class="card-toggle" onclick="toggle(this)">My Video!</button>
-      <div class="card-body">
-        <h2>Just A Trim</h2>
-        <p>'Just A Trim' is a short film that explores themes of identity, existentialism, and the illusion of control within our lives through a helpful haircut tutorial.</p>
-        <a href="https://www.youtube.com/watch?v=Ddt_z4oA3Zs" target="_blank">Watch on YouTube</a>
-      </div>
+    <!-- Replace # with PDF from Google Docs, or replace the entire section with whatever you want. Or delete it! Or add another section below it!-->
+    <div class="section-header">
+      <h1>About me</h1>
     </div>
 
-    <!-- Podcast -->
-    <div class="card">
-      <button class="card-toggle" onclick="toggle(this)">My Podcast!</button>
-      <div class="card-body">
-        <h2>AI vs. Human Creativity</h2>
-        <p>Listen to my classmates and I discuss challenges within the creative sphere and answer questions around AI's capacity to takeover the art world.</p>
-        <a href="https://soundcloud.com/ben-lawton-120223689/ai-vs-human-creativity?si=ffbf88447c914abfb8a88aa22348be07&utm_source=clipboard&utm_medium=text&utm_campaign=social_sharing" target="_blank">Listen on SoundCloud</a>
-      </div>
+    <div class="links-container">
+      <a href="https://www.linkedin.com/in/morganlyynch" class="button" target="_blank">LinkedIn</a>
     </div>
-
-    <h1 class="section-heading">About me</h1>
-
-    <!-- LinkedIn -->
-    <div class="card">
-      <button class="card-toggle" onclick="toggle(this)">LinkedIn</button>
-      <div class="card-body">
-        <h2>LinkedIn</h2>
-        <p>My LinkedIn page.</p>
-        <a href="https://www.linkedin.com/in/morganlyynch" target="_blank">See</a>
-      </div>
-    </div>
-
-    <footer>
-      &copy; Morgan Lynch, 2025. Based on a design by
-      <a href="https://www.w3schools.com/howto/howto_website_create_linktree.asp" target="_blank">w3schools</a>.
-    </footer>
 
   </div>
-
-  <script>
-    function toggle(btn) {
-      const body = btn.nextElementSibling;
-      const isOpen = body.classList.contains('open');
-      document.querySelectorAll('.card-body').forEach(b => b.classList.remove('open'));
-      document.querySelectorAll('.card-toggle').forEach(b => b.classList.remove('active'));
-      if (!isOpen) {
-        body.classList.add('open');
-        btn.classList.add('active');
-      }
-    }
-  </script>
-
+  <div class="footer">
+    <p>© Morgan Lynch, 2026. Based on a design by <a
+        href="https://www.w3schools.com/howto/howto_website_create_linktree.asp" target="_blank">w3schools</a>.
+    </p>
+  </div>
+  <script type="text/javascript" src="js/slider.js"></script>
 </body>
+
 </html>
