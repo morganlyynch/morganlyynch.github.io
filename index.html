@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Morgan Lynch</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+
+  <div class="main">
+
+    <!-- Profile at top -->
+    <div class="profile">
+      <img src="profile.jpeg" alt="Morgan Lynch" class="profile-pic" />
+      <p class="bio">Hey. I'm <strong>Morgan Lynch</strong>, a 4th year Economics student with a passion for monetary policy reform.</p>
+    </div>
+
+    <h1 class="section-heading">My work</h1>
+
+    <!-- Blog -->
+    <div class="card">
+      <button class="card-toggle" onclick="toggle(this)">My Blog!</button>
+      <div class="card-body">
+        <h2>Do You Really Need That?: A Deep Dive into Gen Z's Spending Habits</h2>
+        <p>As an econ major, I am deeply interested in what drives consumer behavior, especially Gen Z consumers. Read my first blog post to learn more about social media influence and other psychological factors that drive impulse spending within our economy.</p>
+        <a href="https://medium.com/@morganlyynch/do-you-really-need-that-a-deep-dive-into-gen-zs-spending-habits-c872b793e0a2" target="_blank">Read on Medium</a>
+      </div>
+    </div>
+
+    <!-- Video -->
+    <div class="card">
+      <button class="card-toggle" onclick="toggle(this)">My Video!</button>
+      <div class="card-body">
+        <h2>Just A Trim</h2>
+        <p>'Just A Trim' is a short film that explores themes of identity, existentialism, and the illusion of control within our lives through a helpful haircut tutorial.</p>
+        <a href="https://www.youtube.com/watch?v=Ddt_z4oA3Zs" target="_blank">Watch on YouTube</a>
+      </div>
+    </div>
+
+    <!-- Podcast -->
+    <div class="card">
+      <button class="card-toggle" onclick="toggle(this)">My Podcast!</button>
+      <div class="card-body">
+        <h2>AI vs. Human Creativity</h2>
+        <p>Listen to my classmates and I discuss challenges within the creative sphere and answer questions around AI's capacity to takeover the art world.</p>
+        <a href="https://soundcloud.com/ben-lawton-120223689/ai-vs-human-creativity?si=ffbf88447c914abfb8a88aa22348be07&utm_source=clipboard&utm_medium=text&utm_campaign=social_sharing" target="_blank">Listen on SoundCloud</a>
+      </div>
+    </div>
+
+    <h1 class="section-heading">About me</h1>
+
+    <!-- LinkedIn -->
+    <div class="card">
+      <button class="card-toggle" onclick="toggle(this)">LinkedIn</button>
+      <div class="card-body">
+        <h2>LinkedIn</h2>
+        <p>My LinkedIn page.</p>
+        <a href="https://www.linkedin.com/in/morganlyynch" target="_blank">See</a>
+      </div>
+    </div>
+
+    <footer>
+      &copy; Morgan Lynch, 2025. Based on a design by
+      <a href="https://www.w3schools.com/howto/howto_website_create_linktree.asp" target="_blank">w3schools</a>.
+    </footer>
+
+  </div>
+
+  <script>
+    function toggle(btn) {
+      const body = btn.nextElementSibling;
+      const isOpen = body.classList.contains('open');
+      document.querySelectorAll('.card-body').forEach(b => b.classList.remove('open'));
+      document.querySelectorAll('.card-toggle').forEach(b => b.classList.remove('active'));
+      if (!isOpen) {
+        body.classList.add('open');
+        btn.classList.add('active');
+      }
+    }
+  </script>
+
+</body>
+</html>
